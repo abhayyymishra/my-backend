@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.send('Server is running!');
 });
 
+app.get('/office-test', (req, res) => {
+  res.send('This route added from office!');
+});
+
 app.post('/signup', async (req, res) => {
   const newUser = new User(req.body);
   await newUser.save();
